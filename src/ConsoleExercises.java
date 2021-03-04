@@ -33,9 +33,14 @@ public class ConsoleExercises {
     // Exercise 3
         // 1
         System.out.println("What is the length of the codeUp classroom?");
-        String length = sc.nextInt();
+        String length = sc.nextLine();
         System.out.println("What is the width of the codeUp classroom?");
-        int width = sc.nextInt();
+        String width = sc.nextLine();
+        double lengthInt = Double.parseDouble(length);
+        double widthInt = Double.parseDouble(width);
+        double area = lengthInt * widthInt;
+        double perimeter = ((lengthInt * 2) + (widthInt * 2));
+        System.out.printf("The area of the codeup classroom is %.2f and the perimeter is %.2f", area, perimeter);
 
 
 
