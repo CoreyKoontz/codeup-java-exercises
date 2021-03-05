@@ -18,17 +18,6 @@ public class StringExercise {
 //        String backslash ="I can do backslashes \\, double backslashes \\\\, \nand the amazing tripple backslash \\\\\\!";
 //        System.out.println(backslash);
 
-//------- Exercise 2 -----------------------------
-
-        class bob {
-            public void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
-                System.out.println("Talk to bob");
-//                String userInp =
-
-
-            }
-        }
 
 //--------- String Notes --------------------------------------------------------------------
 
@@ -121,7 +110,6 @@ public class StringExercise {
 //        System.out.println(lastName);
 
 
-
 //        .toLowerCase()
 //        .toUpperCase()
 
@@ -150,8 +138,6 @@ public class StringExercise {
         //    .concat(word1.substring(0, 1).toLowerCase())
         //    .concat("ay");
         //System.out.println(pigLatinWord);
-
-
 
 
     }
