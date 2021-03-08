@@ -19,13 +19,14 @@ public class bob {
             if (lastChar.equals("?")) {
                 System.out.println("sure");
             }
-            if (lastChar.equals("!")) {
+            else if (lastChar.equals("!")) {
                 System.out.println("Whoa, chill out!");
 
             }
-            if (lastChar.equals("")) {
+            else if (lastChar.equals("")) {
                 System.out.println("Fine. Be that way!");
-            } else {
+            }
+            else {
                 System.out.println("Whatever");
             }
         } else {

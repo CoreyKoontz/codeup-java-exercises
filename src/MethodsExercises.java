@@ -143,8 +143,13 @@ public class MethodsExercises {
 //        userWantsToContinue();
 //        isEven(4);
 //        countOdds(2,25);
-        isVowel('e');
+//        isVowel('e');
+//        hasVowels("does this have vowels");
+//        printName("Corey", 10);
+        System.out.println(sum(10));
+
     }
+
 
     // Write a method named firstChar() that takes a string as an input and returns the first letter as a character data type.
     public static char firstChar(String input) {
@@ -229,16 +234,58 @@ public class MethodsExercises {
         if (input == 'a'||input == 'e'||input == 'i'||input == 'o'||input == 'u'||
             input == 'A'||input == 'E'||input == 'I'||input == 'O'||input == 'U'){
             vowel = true;
-            System.out.println("Is vowel");
+//            System.out.println("Is vowel");
         } else {
             vowel = false;
-            System.out.println("Is not a vowel)";
+//            System.out.println("Is not a vowel)";
         }
         return vowel;
     }
     //Write a method named hasVowels() that accepts a string of any length and returns a boolean if there are any vowels in that string.
+    public static boolean hasVowels(String input) {
+        boolean anyVowels = false;
+        for (Character i = input.charAt(0); i < input.length(); i++) {
+            if (isVowel(i)) {
+                anyVowels = true;
+                System.out.println("this string has vowels");
+            }
+            else {
+                anyVowels = false;
+                System.out.println("there are no vowels in this string");
+            }
+        }
+        return anyVowels;
+    }
     //Write a method named countVowels() that accepts a string of any length and returns an integer count of the number of vowels in the provided input String.
     //Write a solution to FizzBuzz using recursion instead of a loop.
     //Write a method named isPrime() that that accepts in an integer number and returns a boolean if the number is evenly divisible only by either 1 or the number itself.
     //Write a method named getTwentyPrimes() that returns a string containing the first 20 prime numbers, each separated by a comma. Output: "1, 2, 3, 5, 7, 11, 13, 17, 19"... until we have a total count of 20 primes in the string.
+
+
+//--- Recursion ----------------------
+    // - Recursion is calling a method inside of itself
+    // - Must have some kind of condition to stop the recursive method.
+
+    public static void printName (String name, int numTimesToRun) {
+
+        if (numTimesToRun > 0) {
+            System.out.println(name);
+            printName(name, numTimesToRun -1); // Setting the condition to stop the recursive method
+        }
+    }
+
+    // create a method that adds a number to the next number below it
+    public static int sum (int k) {
+        if (k > 0) {
+            return k + sum(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+
+
+
+
+
 }
