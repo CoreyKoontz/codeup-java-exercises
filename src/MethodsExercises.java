@@ -2,12 +2,32 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class MethodsExercises {
-//
-//    public static void main(String[] args) {
-//
-//        System.out.println(tryGetSalutation("Corey"));
-//
-//    }
+
+    public static void main(String[] args) {
+
+        System.out.println(addition(10, 5));
+        System.out.println(subtraction(10, 5));
+        System.out.println(multiplication(10, 5));
+        System.out.println(division(10, 5));
+    }
+
+//----------- Method Exercises ---------------------------------
+
+    public static int addition (int x, int y) {
+        return x + y;
+    }
+
+    public static int subtraction (int x, int y) {
+        return x - y;
+    }
+
+    public static int multiplication (int x, int y) {
+        return x * y;
+    }
+
+    public static int division (int x, int y) {
+        return x / y;
+    }
 
 //----------- Method Notes -------------------------------------
 
@@ -135,20 +155,20 @@ public class MethodsExercises {
 //------ Extra Exercises -----------------------------------------------------
 
 
-    public static void main(String[] args) {
-//        firstChar("hello");
-//        secondChar("hello");
-//        lastChar("hello");
-//        secondToLastChar("hello");
-//        userWantsToContinue();
-//        isEven(4);
-//        countOdds(2,25);
-//        isVowel('e');
-//        hasVowels("does this have vowels");
-//        printName("Corey", 10);
-        System.out.println(sum(10));
-
-    }
+//    public static void main(String[] args) {
+////        firstChar("hello");
+////        secondChar("hello");
+////        lastChar("hello");
+////        secondToLastChar("hello");
+////        userWantsToContinue();
+////        isEven(4);
+////        countOdds(2,25);
+////        isVowel('e');
+////        hasVowels("does this have vowels");
+////        printName("Corey", 10);
+//        System.out.println(sum(10));
+//
+//    }
 
 
     // Write a method named firstChar() that takes a string as an input and returns the first letter as a character data type.
