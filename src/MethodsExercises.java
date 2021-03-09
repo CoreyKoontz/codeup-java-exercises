@@ -1,37 +1,93 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class MethodsExercises {
 
     public static void main(String[] args) {
 
-        System.out.println(addition(10, 5));
-        System.out.println(subtraction(10, 5));
-        System.out.println(multiplication(10, 5));
-        System.out.println(division(10, 5));
+//        System.out.println(addition(5, 10));
+//        System.out.println(subtraction(5, 10));
+//        System.out.println(multiplication(5, 10));
+//        System.out.println(division(5, 10));
+//        System.out.println(modulus(5, 10));
+//        getInteger(1, 10);
+        getUserNum();
+
+
     }
 
 //----------- Method Exercises ---------------------------------
 
-    public static int addition (int x, int y) {
-        return x + y;
+
+// 1.
+//    public static int addition (int x, int y) {
+//        return x + y;
+//    }
+//
+//    public static int subtraction (int x, int y) {
+//        return x - y;
+//    }
+//
+//    public static int multiplication (int x, int y) {       // return (x / (1 / y)) does not work. Why?
+//
+//
+//    }
+//
+//    public static int division (int x, int y) {
+//        return x / y;
+//    }
+//
+//    public static int modulus (int x, int y) {
+//        return x % y;
+//    }
+//
+// 2.
+//    public static int getInteger(int min, int max) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter a number between 1 and 10");
+//        int userNum = sc.nextInt();
+//        if ((userNum < min) || (userNum > max)) {
+//            getInteger(min, max);  //--------------------> Recursion instead of while loop
+//            userNum = sc.nextInt();
+//        }
+//        System.out.printf("Yes, %d is in range", userNum);
+//        return userNum;
+//    }
+
+    // DRY: Don't repeat yourself
+
+    public static boolean isBetween(int min, int max, int check) {
+        return (min <= check && max >= check);
     }
 
-    public static int subtraction (int x, int y) {
-        return x - y;
+    // DRY: Don't repeat yourself
+
+    public static int getRangeInput(int min, int max, Scanner input) {
+        System.out.println("enter an number between " + min + " and " + max + ":");
+        return input.nextInt();
     }
 
-    public static int multiplication (int x, int y) {
-        return x * y;
+
+
+    // 3.
+    public static void getUserNum() {
+        Scanner sc = new Scanner(System.in);
+        int userInput = getRangeInput(1, 10, sc);
+        System.out.println(doFactorial(userInput));
     }
 
-    public static int division (int x, int y) {
-        return x / y;
+    public static int doFactorial(int userInput) {
+        if ( userInput > 0) {
+            System.out.println(userInput);
+            return userInput * doFactorial(userInput - 1);
+        } else {
+            return 0;
+        }
+
     }
 
 //----------- Method Notes -------------------------------------
 
-    // Access Modifiers
+    // --------- Access Modifiers --------------
 
 //    public static String tryGetSalutation(String name) {
 //
@@ -131,7 +187,7 @@ public class MethodsExercises {
      *   BONUS: Use the Scanner class to get the names from user input
      * Bonus: create a logic method that
      *  */
-    Scanner sc = new Scanner(System.in);
+//    Scanner sc = new Scanner(System.in);
 //
 //    public static void main(String[] args) {
 //
@@ -171,111 +227,111 @@ public class MethodsExercises {
 //    }
 
 
-    // Write a method named firstChar() that takes a string as an input and returns the first letter as a character data type.
-    public static char firstChar(String input) {
-        return (input.charAt(0));
-    }
-
-    //Write a method named secondChar() that takes a string as an input and returns the second letter as a character data type.
-    public static char secondChar(String input) {
-        return (input.charAt(1));
-    }
-
-    //Write a method named lastChar() that takes a string as an input and returns the last letter as a character data type.
-    public static char lastChar(String input) {
-        return (input.charAt(input.length() - 1));
-    }
-
-    //Write a method named secondToLastChar() that takes a string as an input and returns the second to letter as a character data type.
-    public static char secondToLastChar(String input) {
-        return (input.charAt(input.length() - 2));
-    }
-
-    //Write a method named userWantsToContinue(). This method should prompt the user if they want to continue and then return a boolean value if the user inputs "y" or "yes".
-    public static boolean userWantsToContinue() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Yes or No");
-        String userInput = sc.next();
-        boolean userCon = false;
-        if (userInput.equalsIgnoreCase("yes")) {
-            userCon = true;
-            System.out.println("user wants to continue");
-        }
-        return userCon;
-    }
-
-
-    //Write a method named isEven() that takes in an integer and returns a boolean if the input is even or not.
-    public static boolean isEven(int num) {
-        boolean even = false;
-        if (num % 2 == 0) {
-            even = true;
-            System.out.println("even");
-        }
-        return even;
-    }
-
-    //Write a method named isOdd() that takes in an integer and returns a boolean if the input is odd or not.
-    public static boolean isOdd(int num) {
-        boolean odd = false;
-        if (num % 2 != 0) {
-            odd = true;
-            System.out.println("odd");
-        }
-        return odd;
-    }
-
-    //Write a method named countOdds(start, end) that returns an integer containing the integer that is the count of all odd numbers between the start and the end input integers.
-    public static int countOdds(int start, int end) {
-        int oddCount = 0;
-        for (int i = start; i < end; i++) {
-            if (i % 2 != 0) {
-                oddCount++;
-            }
-        }
-        System.out.println(oddCount);
-        return oddCount;
-
-    }
-    //Write a method named countEvens(start, end) that returns an integer containing the integer that is the count of all even numbers between the start and the end input integers.
-    public static int countEvens(int start, int end) {
-        int evenCount = 0;
-        for (int i = start; i < end; i++) {
-            if (i % 2 == 0) {
-                evenCount++;
-            }
-        }
-        System.out.println(evenCount);
-        return evenCount;
-    }
-    //Write a method named isVowel() that accepts a String input of length 1 and returns a boolean if that string is a vowel other than "y".
-    public static boolean isVowel(Character input) {
-        boolean vowel = false;
-        if (input == 'a'||input == 'e'||input == 'i'||input == 'o'||input == 'u'||
-            input == 'A'||input == 'E'||input == 'I'||input == 'O'||input == 'U'){
-            vowel = true;
-//            System.out.println("Is vowel");
-        } else {
-            vowel = false;
-//            System.out.println("Is not a vowel)";
-        }
-        return vowel;
-    }
-    //Write a method named hasVowels() that accepts a string of any length and returns a boolean if there are any vowels in that string.
-    public static boolean hasVowels(String input) {
-        boolean anyVowels = false;
-        for (Character i = input.charAt(0); i < input.length(); i++) {
-            if (isVowel(i)) {
-                anyVowels = true;
-                System.out.println("this string has vowels");
-            }
-            else {
-                anyVowels = false;
-                System.out.println("there are no vowels in this string");
-            }
-        }
-        return anyVowels;
-    }
+//    // Write a method named firstChar() that takes a string as an input and returns the first letter as a character data type.
+//    public static char firstChar(String input) {
+//        return (input.charAt(0));
+//    }
+//
+//    //Write a method named secondChar() that takes a string as an input and returns the second letter as a character data type.
+//    public static char secondChar(String input) {
+//        return (input.charAt(1));
+//    }
+//
+//    //Write a method named lastChar() that takes a string as an input and returns the last letter as a character data type.
+//    public static char lastChar(String input) {
+//        return (input.charAt(input.length() - 1));
+//    }
+//
+//    //Write a method named secondToLastChar() that takes a string as an input and returns the second to letter as a character data type.
+//    public static char secondToLastChar(String input) {
+//        return (input.charAt(input.length() - 2));
+//    }
+//
+//    //Write a method named userWantsToContinue(). This method should prompt the user if they want to continue and then return a boolean value if the user inputs "y" or "yes".
+//    public static boolean userWantsToContinue() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Yes or No");
+//        String userInput = sc.next();
+//        boolean userCon = false;
+//        if (userInput.equalsIgnoreCase("yes")) {
+//            userCon = true;
+//            System.out.println("user wants to continue");
+//        }
+//        return userCon;
+//    }
+//
+//
+//    //Write a method named isEven() that takes in an integer and returns a boolean if the input is even or not.
+//    public static boolean isEven(int num) {
+//        boolean even = false;
+//        if (num % 2 == 0) {
+//            even = true;
+//            System.out.println("even");
+//        }
+//        return even;
+//    }
+//
+//    //Write a method named isOdd() that takes in an integer and returns a boolean if the input is odd or not.
+//    public static boolean isOdd(int num) {
+//        boolean odd = false;
+//        if (num % 2 != 0) {
+//            odd = true;
+//            System.out.println("odd");
+//        }
+//        return odd;
+//    }
+//
+//    //Write a method named countOdds(start, end) that returns an integer containing the integer that is the count of all odd numbers between the start and the end input integers.
+//    public static int countOdds(int start, int end) {
+//        int oddCount = 0;
+//        for (int i = start; i < end; i++) {
+//            if (i % 2 != 0) {
+//                oddCount++;
+//            }
+//        }
+//        System.out.println(oddCount);
+//        return oddCount;
+//
+//    }
+//    //Write a method named countEvens(start, end) that returns an integer containing the integer that is the count of all even numbers between the start and the end input integers.
+//    public static int countEvens(int start, int end) {
+//        int evenCount = 0;
+//        for (int i = start; i < end; i++) {
+//            if (i % 2 == 0) {
+//                evenCount++;
+//            }
+//        }
+//        System.out.println(evenCount);
+//        return evenCount;
+//    }
+//    //Write a method named isVowel() that accepts a String input of length 1 and returns a boolean if that string is a vowel other than "y".
+//    public static boolean isVowel(Character input) {
+//        boolean vowel = false;
+//        if (input == 'a'||input == 'e'||input == 'i'||input == 'o'||input == 'u'||
+//            input == 'A'||input == 'E'||input == 'I'||input == 'O'||input == 'U'){
+//            vowel = true;
+////            System.out.println("Is vowel");
+//        } else {
+//            vowel = false;
+////            System.out.println("Is not a vowel)";
+//        }
+//        return vowel;
+//    }
+//    //Write a method named hasVowels() that accepts a string of any length and returns a boolean if there are any vowels in that string.
+//    public static boolean hasVowels(String input) {
+//        boolean anyVowels = false;
+//        for (Character i = input.charAt(0); i < input.length(); i++) {
+//            if (isVowel(i)) {
+//                anyVowels = true;
+//                System.out.println("this string has vowels");
+//            }
+//            else {
+//                anyVowels = false;
+//                System.out.println("there are no vowels in this string");
+//            }
+//        }
+//        return anyVowels;
+//    }
     //Write a method named countVowels() that accepts a string of any length and returns an integer count of the number of vowels in the provided input String.
     //Write a solution to FizzBuzz using recursion instead of a loop.
     //Write a method named isPrime() that that accepts in an integer number and returns a boolean if the number is evenly divisible only by either 1 or the number itself.
@@ -286,22 +342,22 @@ public class MethodsExercises {
     // - Recursion is calling a method inside of itself
     // - Must have some kind of condition to stop the recursive method.
 
-    public static void printName (String name, int numTimesToRun) {
-
-        if (numTimesToRun > 0) {
-            System.out.println(name);
-            printName(name, numTimesToRun -1); // Setting the condition to stop the recursive method
-        }
-    }
-
-    // create a method that adds a number to the next number below it
-    public static int sum (int k) {
-        if (k > 0) {
-            return k + sum(k - 1);
-        } else {
-            return 0;
-        }
-    }
+//    public static void printName (String name, int numTimesToRun) {
+//
+//        if (numTimesToRun > 0) {
+//            System.out.println(name);
+//            printName(name, numTimesToRun -1); // Setting the condition to stop the recursive method
+//        }
+//    }
+//
+//    // create a method that adds a number to the next number below it
+//    public static int sum (int k) {
+//        if (k > 0) {
+//            return k + sum(k - 1);
+//        } else {
+//            return 0;
+//        }
+//    }
 
 
 
