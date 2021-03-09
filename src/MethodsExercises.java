@@ -10,7 +10,7 @@ public class MethodsExercises {
 //        System.out.println(division(5, 10));
 //        System.out.println(modulus(5, 10));
 //        getInteger(1, 10);
-        getUserNum();
+//        getUserNum();
 
 
     }
@@ -55,35 +55,49 @@ public class MethodsExercises {
 
     // DRY: Don't repeat yourself
 
-    public static boolean isBetween(int min, int max, int check) {
-        return (min <= check && max >= check);
-    }
+//    public static boolean isBetween(int min, int max, int check) {
+//        return (min <= check && max >= check);
+//    }
+//
+//    // DRY: Don't repeat yourself
+//
+//    public static int getRangeInput(int min, int max, Scanner input) {
+//        System.out.println("enter an number between " + min + " and " + max + ":");
+//        return input.nextInt();
+//    }
 
-    // DRY: Don't repeat yourself
-
-    public static int getRangeInput(int min, int max, Scanner input) {
-        System.out.println("enter an number between " + min + " and " + max + ":");
-        return input.nextInt();
-    }
 
 
+//    // 3.
+//    public static void getUserNum() {
+//        Scanner sc = new Scanner(System.in);
+//        int userInput = getRangeInput(1, 16, sc);
+//        System.out.println(Factorial(userInput));
+//    }
+//
+//    public static int Factorial(int userInput) {
+//        if ( userInput == 0) {
+//            return 0;
+//        } else {
+//            int currentVal = (userInput * Factorial(userInput - 1));
+//            System.out.printf("%d! = %d\n", userInput, currentVal);
+//            return currentVal;
+//        }
+//
+//    }
 
-    // 3.
-    public static void getUserNum() {
-        Scanner sc = new Scanner(System.in);
-        int userInput = getRangeInput(1, 10, sc);
-        System.out.println(doFactorial(userInput));
-    }
-
-    public static int doFactorial(int userInput) {
-        if ( userInput > 0) {
-            System.out.println(userInput);
-            return userInput * doFactorial(userInput - 1);
-        } else {
-            return 0;
-        }
-
-    }
+    // 4.
+//    public static void getNumberOfSides() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter the number of sides for a pair of dice:");
+//        int userInput = sc.nextInt();
+//    }
+//
+//    public static boolean rollDice() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Roll the dice? Yes or No.");
+//        boolean diceRolled = (sc.hasNextLine().equals("yes"));
+//    }
 
 //----------- Method Notes -------------------------------------
 
