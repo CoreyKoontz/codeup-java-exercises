@@ -6,13 +6,13 @@ public class dishTest {
         Dish d1 = new Dish("Pizza",1000, true);
 
 
-//        d1.printSummary();
+        d1.printSummary();
 
-//        DishTools.shout(d1);
-//
-//        DishTools.analyzeDishCost(d1);
-//
-//        DishTools.flipRecommendation(d1);
+        DishTools.shout(d1);
+
+        DishTools.analyzeDishCost(d1);
+
+        DishTools.flipRecommendation(d1);
 
         d1.changeNameOfDish("pasta");
         System.out.println(d1.shareNameOfDish());

@@ -1,34 +1,32 @@
 import java.util.Locale;
 
 
-//public class DishTools {
-//    // Only meant to be accessed STATICALLY
-//
-//    public static final int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
-//
-//    public static void shout(Dish dishObj) {
-//        System.out.printf("%n%s!",dishObj.nameOfDish.toUpperCase());
-//    }
-//    // ?? Thought that instance properties
-//    //   could not be referenced by static methods?
-//
-//
-//    public static void analyzeDishCost(Dish dishObj) {
-//        if (dishObj.costInCents > AVERAGE_COST_OF_DISH_IN_CENTS) {
-//            System.out.println("\nMore expensive than average");
-//        } else if (dishObj.costInCents == AVERAGE_COST_OF_DISH_IN_CENTS)
-//            System.out.println("\naverage price");
-//        else {
-//            System.out.println("\nLess expensive than average");
-//        }
-//    }
-//
-//    public static void flipRecommendation(Dish dishObj) {
-//        dishObj.wouldRecommend = !dishObj.wouldRecommend;
-//        System.out.println("New \"wouldRecommend\" value: " + dishObj.wouldRecommend);
-//    }
-//
-//}
+public class DishTools {
+    // Only meant to be accessed STATICALLY
+
+    public static final int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
+
+    public static void shout(Dish dishObj) {
+        System.out.printf("%n%s!",dishObj.shareNameOfDish().toUpperCase());
+    }
+
+
+    public static void analyzeDishCost(Dish dishObj) {
+        if (dishObj.shareCostInCents() > AVERAGE_COST_OF_DISH_IN_CENTS) {
+            System.out.println("\nMore expensive than average");
+        } else if (dishObj.shareCostInCents() == AVERAGE_COST_OF_DISH_IN_CENTS)
+            System.out.println("\naverage price");
+        else {
+            System.out.println("\nLess expensive than average");
+        }
+    }
+
+    public static void flipRecommendation(Dish dishObj) {
+        dishObj.changeWouldRecommend(!(dishObj.shareWouldRecommend()));
+        System.out.println("New \"wouldRecommend\" value: " + dishObj.shareWouldRecommend());
+    }
+
+}
 
 // TODO:
 //  - Create a class of static members (variables and methods) called DishTools

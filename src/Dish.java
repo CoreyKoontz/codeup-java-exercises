@@ -20,9 +20,11 @@ public class Dish {
     public int shareCostInCents(){
         return costInCents;
     }
+
     public String shareNameOfDish(){
         return nameOfDish;
     }
+
     public boolean shareWouldRecommend(){
         return wouldRecommend;
     }
