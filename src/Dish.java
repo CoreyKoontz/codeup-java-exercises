@@ -1,10 +1,45 @@
 public class Dish {
 
-    public int costInCents;
+    private int costInCents;
 
-    public String nameOfDish;
+    private String nameOfDish;
 
-    public boolean wouldRecommend;
+    private boolean wouldRecommend;
+
+
+    // Constructor:
+
+    public Dish (String name, int cost, boolean recommend){
+        this.nameOfDish = name;
+        this.costInCents = cost;
+        this.wouldRecommend = recommend;
+    }
+
+    // Getters:
+
+    public int shareCostInCents(){
+        return costInCents;
+    }
+    public String shareNameOfDish(){
+        return nameOfDish;
+    }
+    public boolean shareWouldRecommend(){
+        return wouldRecommend;
+    }
+
+    // Setters:
+
+    public void changeCostInCents(int cost){
+        this.costInCents = cost;
+    }
+
+    public void changeNameOfDish(String nameOfDish){
+        this.nameOfDish = nameOfDish;
+    }
+
+    public void changeWouldRecommend(boolean wouldRecommend){
+        this.wouldRecommend = wouldRecommend;
+    }
 
     public void printSummary() {
         System.out.printf(
@@ -23,3 +58,11 @@ public class Dish {
 //      Cost: COST_IN_CENTS_HERE
 //      Name: NAME_OF_DISH_HERE
 //      Recommended: BOOLEAN_VALUE_OF_WOULD_RECOMMEND_HERE
+
+// TODO: mini-exercise 3
+//  Refactor your Dish and DishTest classes...
+//  1) Change all properties in the Dish class to private visibility (printSummary should remain public)
+//  2) Add getters and setters for these properties (write them manually then erase them and use IntelliJ to write them quickly)
+//  3) Refactor code as needed in DishTest to access and modify dish object property values
+//  4) Add a constructor method to Dish that will assign all properties
+//  5) Refactor DishTest again to use the constructor to set all property values rather than setter methods
