@@ -1,5 +1,8 @@
 public class Person {
 
+
+    // 1.
+
     private String name;
 
     public String getName(String name){
@@ -23,6 +26,9 @@ public class Person {
         Person p1 = new Person("Jim");
         System.out.println(p1.name);
     }
+
+
+
 }
 
 
