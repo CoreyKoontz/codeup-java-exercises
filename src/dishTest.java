@@ -1,23 +1,23 @@
-public class dishTest {
-
-    public static void main(String[] args) {
-
-        // Instance
-        Dish d1 = new Dish("Pizza",1000, true);
-
-
-        d1.printSummary();
-
-        DishTools.shout(d1);
-
-        DishTools.analyzeDishCost(d1);
-
-        DishTools.flipRecommendation(d1);
-
-    }
-
-
-}
+//public class dishTest {
+//
+//    public static void main(String[] args) {
+//
+//        // Instance
+//        Dish d1 = new Dish("Pizza",1000, true);
+//
+//
+//        d1.printSummary();
+//
+//        DishTools.shout(d1);
+//
+//        DishTools.analyzeDishCost(d1);
+//
+//        DishTools.flipRecommendation(d1);
+//
+//    }
+//
+//
+//}
 
 // TODO:
 //  - Create another class called DishTest

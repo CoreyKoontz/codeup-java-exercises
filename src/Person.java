@@ -1,5 +1,33 @@
 public class Person {
+
+    private String name;
+
+    public String getName(String name){
+        return this.name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void sayHello(){
+        System.out.printf("Hello %s", name);
+    }
+
+    //Constructor:
+    public Person (String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+        Person p1 = new Person("Jim");
+        System.out.println(p1.name);
+    }
 }
+
+
+
+
 
 
 // TODO ------------- OPP PRE-LECTURE QUESTIONS ----------------------------
