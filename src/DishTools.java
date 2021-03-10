@@ -2,12 +2,16 @@ import java.util.Locale;
 
 //
 public class DishTools {
+    // Only meant to be accessed STATICALLY
 
     public static final int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
 
     public static void shout(Dish dishObj) {
         System.out.printf("%n%s!",dishObj.nameOfDish.toUpperCase());
     }
+    // ?? Thought that instance properties
+    //   could not be referenced by static methods?
+
 
     public static void analyzeDishCost(Dish dishObj) {
         if (dishObj.costInCents > AVERAGE_COST_OF_DISH_IN_CENTS) {

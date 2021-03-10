@@ -2,6 +2,7 @@ public class dishTest {
 
     public static void main(String[] args) {
 
+        // Instance
         Dish d1 = new Dish();
         d1.nameOfDish = "Pizza";
         d1.costInCents = 1000;
