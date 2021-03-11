@@ -5,30 +5,37 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner sc;
+    private Scanner sc; // creating a private scanner object
 
-    // Constructor:
+    // Constructor: sets the value of scanner to an instance of the Scanner class
     public Input (){
         this.sc = new Scanner(System.in);
+        // -Instead of passing the scanner object we are going to
+        //  instantiate inside of the the constructor.
+        // -This will set the value of the scanner everytime we
+        //  instantiate an Input class.
     }
 
+    // Returns a string from the user.
     public String getString() {
         System.out.println("Enter a string:");
         return sc.nextLine();
     }
 
     public boolean yesOrNo() {
-        String input = sc.next();
+        String input = sc.next(); // grabbing input from the user
         return (input.equalsIgnoreCase("y"));
+        // Returning false if anything other than "y/Y" is entered
     }
 
+    // Doing
     public int getInt() {
         if (sc.hasNextInt()) {
             return sc.nextInt();
         } else {
             System.out.println("Input invalid. Try again.");
             sc.nextLine(); // Clearing the invalid input
-            return getInt();
+            return getInt(); // Recursion
         }
     }
 
@@ -39,8 +46,8 @@ public class Input {
             return userInt;
         } else {
             System.out.println("Out of Range. Enter a number between " + min + " and " + max);
-            sc.nextLine();
-            return getInt(min, max);
+            sc.nextLine(); // Clearing the invalid input
+            return getInt(min, max); // Recursion
         }
     }
 
@@ -49,8 +56,8 @@ public class Input {
             return sc.nextDouble();
         } else {
             System.out.println("invalid input. Try again.");
-            sc.nextLine();
-            return getInt();
+            sc.nextLine(); // Clearing the invalid input
+            return getInt(); // Recursion
         }
     }
 
@@ -61,16 +68,16 @@ public class Input {
             return userDouble;
         } else {
             System.out.println("Out of Range. Enter a double between " + min + " and " + max + ":");
-            sc.nextLine();
-            return getDouble(min, max);
+            sc.nextLine(); // Clearing the invalid input
+            return getDouble(min, max); // Recursion
         }
     }
 
     public static void main(String[] args) {
 
-        Input input = new Input();
+        Input input = new Input(); // Creating an instance of our Input class
 
-//       // getString method:
+//       // getString method: retrieving a string from the user
 //        String userInput = input.getString();
 //        System.out.println(userInput);
 //
@@ -100,10 +107,6 @@ public class Input {
 //        //gitDouble(min, max)
 //        System.out.println("Enter a double between 1.5 and 10.5:");
 //        double userInput = input.getDouble(1.5, 10.5);
-
-
-
-
 
 
     }
