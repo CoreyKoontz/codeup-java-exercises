@@ -1,35 +1,75 @@
-public class Person {
+//public class Person {
+//
+//
+//    // 1. Object Basics
+//
+//    private String name;
+//
+//    public String getName(){
+//        return this.name;
+//    }
+//
+//    public void setName(String name){
+//        this.name = name;
+//    }
+//
+//    public void sayHello(){
+//        System.out.printf("%nHello %s", this.name);
+//    }
+//
+//    //Constructor:
+//    public Person (String name) {
+////        System.out.println("The constructor is working");
+//        this.name = name;
+//    }
+//
+//    public static void main(String[] args) {
+//        Person p1 = new Person("Jim");
+//        p1.sayHello();
+//        p1.setName("Pam");
+//        p1.sayHello();
+//        System.out.println(p1.getName());
+//
+
+        // 1. Understanding References:
+
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName()));
+//        // This will return true
+//        System.out.println(person1 == person2);
+//        // This will return false
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        // This is just creating an alias, not a new object
+//        System.out.println(person1 == person2);
+//        // Will return true because it is the same object
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        // Creating alias
+//        System.out.println(person1.getName());
+//        // Prints "John"
+//        System.out.println(person2.getName());
+//        // Prints "John"
+//        person2.setName("Jane");
+//        // Changes person2 name to "Jane" which in turn changes person1 name to "Jane" as well.
+//        System.out.println(person1.getName());
+//        // "Jane"
+//        System.out.println(person2.getName());
+//        // "Jane"
+
+//    }
 
 
-    // 1.
-
-    private String name;
-
-    public String getName(String name){
-        return this.name;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void sayHello(){
-        System.out.printf("Hello %s", name);
-    }
-
-    //Constructor:
-    public Person (String name) {
-        this.name = name;
-    }
-
-    public static void main(String[] args) {
-        Person p1 = new Person("Jim");
-        System.out.println(p1.name);
-    }
 
 
 
-}
+
+
+
+//}
 
 
 
