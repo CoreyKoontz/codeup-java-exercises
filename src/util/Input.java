@@ -73,10 +73,10 @@ public class Input {
         }
     }
 
-    public static void main(String[] args) {
-
-        Input input = new Input(); // Creating an instance of our Input class
-
+//    public static void main(String[] args) {
+//
+//        Input input = new Input(); // Creating an instance of our Input class
+//
 //       // getString method: retrieving a string from the user
 //        String userInput = input.getString();
 //        System.out.println(userInput);
@@ -109,7 +109,7 @@ public class Input {
 //        double userInput = input.getDouble(1.5, 10.5);
 
 
-    }
+//    }
 
 
 }
