@@ -4,11 +4,13 @@ import java.util.Arrays;
 public class ArraysExercise {
 
 
-    public static Person[] addToArray(Person[] array, Person obj) {
+    public static Person[] addPerson(Person[] array, Person obj) {
         Person[] newArray = Arrays.copyOf(array, array.length + 1);
         newArray[newArray.length -1] = obj;
         return newArray;
     }
+
+
 
 
     public static void main(String[] args) {
@@ -28,8 +30,9 @@ public class ArraysExercise {
         // length of the original peopleArray
 
         // Adding new element to new array
-        Person[] newPeopleArray = addToArray( peopleArray, new Person("Dwight"));
-        // Printing the new aray with the new element
+        Person[] newPeopleArray = addPerson( peopleArray, new Person("Dwight"));
+
+        // Printing the new array with the new element
         for ( Person person : newPeopleArray) {
             System.out.print(person.getName() + " ");
         }
