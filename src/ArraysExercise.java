@@ -19,37 +19,24 @@ public class ArraysExercise {
             new Person("Mike")
         };
 
+        // Printing the elements of the original return
         for (Person person : peopleArray) {
             System.out.print(person.getName() + " ");
         }
 
+        // Creating the new array because you cannot change the
+        // length of the original peopleArray
 
+        // Adding new element to new array
         Person[] newPeopleArray = addToArray( peopleArray, new Person("Dwight"));
-
+        // Printing the new aray with the new element
         for ( Person person : newPeopleArray) {
             System.out.print(person.getName() + " ");
         }
 
-//        System.out.println(Arrays.toString(peopleArray));
-//        System.out.println(Arrays.toString(newPeopleArray));
+        System.out.println(Arrays.toString(peopleArray));
 
-//        newPeopleArray[newPeopleArray.length -1] = new Person("Dwight");
-
-//        public static array addPerson() {
-//            // Creating the new array because you cannot change the
-//            // length of the original peopleArray
-//            Person newPeopleArray[] = new Person[peopleArray.length + 1];
-//            // Inserting the old elements into the new array:
-//        }
-
-
-//        System.out.println(Arrays.toString(peopleArray));
-
-//        peopleArray[0] = Person.setName("John");
-
-//        int[] numbers = {1, 2, 3, 4, 5};
-
-//        for(Person person : people )
+        int[] numbers = {1, 2, 3, 4, 5};
 
 
     }
