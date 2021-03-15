@@ -8,7 +8,7 @@ public class IngredientTest {
 
     public static void main(String[] args) {
 
-        throwAwayIngredient(PeanutButter );
+//        throwAwayIngredient(PeanutButter );
 
     }
 
