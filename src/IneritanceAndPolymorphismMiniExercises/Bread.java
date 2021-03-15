@@ -16,4 +16,8 @@ public class Bread extends Ingredient{
         // Set isToasted to true
     }
 
+    public void throwAway() {
+        System.out.println("Throwing away bread");
+    }
+
 }

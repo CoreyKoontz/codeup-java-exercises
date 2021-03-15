@@ -10,6 +10,12 @@ public class PeanutButter extends Ingredient{
         System.out.println("");
     }
 
+    public void throwAway() {
+        onHand = false;
+        System.out.println("Throwing away peanut butter");
+
+    }
+
 
 
 }
