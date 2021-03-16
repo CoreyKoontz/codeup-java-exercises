@@ -4,17 +4,20 @@ public class ShapesTest {
 
     public static void main(String[] args) {
 
+        Quadrilateral myShape;
+
         // New instance of a rectangle:
-        var box1 = new Rectangle(4, 5);
-        System.out.println("Box1 Perimeter: " + box1.getPerimeter());
-        System.out.println("Box1 Area: " + box1.getArea());
+        myShape = new Rectangle(23, 53);
+        System.out.println("Box1 Perimeter: " + myShape.getPerimeter());
+        System.out.println("Box1 Area: " + myShape.getArea());
 
         // New instance of a square:
-        var box2 = new Square(5);
-        System.out.println("Box2 Perimeter: " + box2.getPerimeter());
-        System.out.println("Box2 Area: " + box2.getArea());
+        myShape = new Square(45);
+        System.out.println("Box2 Perimeter: " + myShape.getPerimeter());
+        System.out.println("Box2 Area: " + myShape.getArea());
 
-
+//        System.out.println(myShape.getWidth()); // Cannot resolve because the constructor that assigns
+                                                  // is in the abstract Quadrilateral class
 
 
     }
