@@ -2,20 +2,20 @@ package movies;
 
 public class Movie {
 
-    // ------ Private fields for name and category -----------------------------
+    // ------------------------------------------------------ Private fields for name and category:
 
     private String name;
 
     private String category;
 
-    // ------ Constructor ------------------------------------------------------
+    // ------------------------------------------------------ Constructor:
 
     public Movie(String name, String category) {
         this.name = name;
         this.category = category;
     }
 
-    // ----- Getters ------------------------------------------------------------
+    // ------------------------------------------------------ Getters:
 
     public String getName() {
         return name;
@@ -25,7 +25,7 @@ public class Movie {
         return category;
     }
 
-    // ---- Setters -------------------------------------------------------------
+    // ------------------------------------------------------ Setters:
 
     public void setName(String name) {
         this.name = name;
