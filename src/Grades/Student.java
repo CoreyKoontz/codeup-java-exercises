@@ -1,40 +1,50 @@
-//package Grades;
-//
-//import java.util.*;
-//
-//public class Student {
-//
-//    // ------------------------------------------------------ Fields/Properties:
-//    private String studentName;
-//
-//    private ArrayList<Integer> grades;
-//
-//    // ------------------------------------------------------ Constructor:
-//
-//    public Student(String studentName) {
-//        this.studentName = studentName;
-//        new ArrayList<Integer>();
+package Grades;
+
+import java.util.*;
+
+public class Student {
+
+    // ------------------------------------------------------ Fields/Properties:
+    private String studentName;
+
+    private ArrayList<Integer> grades;
+
+    // ------------------------------------------------------ Constructor:
+    public Student(String studentName) {
+        this.studentName = studentName;
+        this.grades = new ArrayList<>();
+    }
+
+    // ------------------------------------------------------ returns the student's name:
+    public String getStudentName() {
+        return this.studentName;
+    }
+
+    // ------------------------------------------------------ adds the given grade to the grades property:
+    public void addGrade(int grade) {
+        grades.add(grade);
+    }
+
+    // ------------------------------------------------------ returns the average of the students grades:
+    public double getGradeAverage() {
+        double container = 0.0;
+        for (int grade : grades) {
+            container += grade;
+        }
+        return container / grades.size();
+    }
+
+//    // ------------------------------------------------------ Main Method:
+//    public static void main(String[] args) {
+//        Student student = new Student("Tim");
+//        student.addGrade(98);
+//        student.addGrade(90);
+//        student.addGrade(87);
+//        student.addGrade(78);
+//        student.addGrade(85);
+//        System.out.println(student.grades);
+//        System.out.println(student.getGradeAverage());
 //    }
-//
-//
-//    public String getStudentName() {
-//        return this.studentName;
-//    }
-//
-//    public void addGrade(int grade) {
-//        grades.add(grade);
-//    }
-
-
-
-
-
-
-
-
-
-
-
 
 
 //        // -------------------------------------------------- Collection Lecture Notes:
@@ -80,4 +90,4 @@
 //        usernames.put("Luis","MontealegreLuis");
 
 
-//}
+}
