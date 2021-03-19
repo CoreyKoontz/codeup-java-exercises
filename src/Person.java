@@ -1,52 +1,69 @@
 public class Person {
 
 
-    // 1. Object Basics
+    // TODO ================== >>> OBJECT BASICS <<< ========================
+
+    // ------------------------------------------------------ Fields/Properties:
 
     private String name;
 
+
+    // ------------------------------------------------------ Methods:
+
+    // Return the person's name:
     public String getName(){
         return this.name;
     }
 
+    // Change the name property to the passed value:
     public void setName(String name){
         this.name = name;
     }
 
+    // Print a message to the console using the person's name:
     public void sayHello(){
         System.out.printf("%nHello %s", this.name);
     }
 
-    //Constructor:
+
+    // ------------------------------------------------------ Constructor:
+
+    // Constructor should accept a 'String' value and and sets the person's name to
+    // the passed string.
     public Person (String name) {
-//        System.out.println("The constructor is working");
         this.name = name;
     }
 
-//    public static void main(String[] args) {
-//        Person p1 = new Person("Jim");
+
+    // ------------------------------------------------------ Main Method:
+
+    // Create a new `Person` object and tests the above methods.
+    public static void main(String[] args) {
+//        Person p1 = new Person("Jim"); // creating an instance of Person object
 //        p1.sayHello();
 //        p1.setName("Pam");
 //        p1.sayHello();
 //        System.out.println(p1.getName());
-//    }
 
 
-        // 1. Understanding References:
+    }
 
-//        Person person1 = new Person("Mike");
-//        Person person2 = new Person("Jim");
-//        Person person3 = new Person("Pam");
+
+    // TODO ================== >>> UNDERSTANDING REFERENCES <<< ========================
+    // *** NOTE: These examples must be in the main method to work:
+
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
-//        // This will return true
+//        // This will return true because the name value is the same
 //        System.out.println(person1 == person2);
-//        // This will return false
+//        // This will return false because they are two separate objects (memory allocation)
 
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
-//        // This is just creating an alias, not a new object
+//        // This is just creating an alias, not a new object.
 //        System.out.println(person1 == person2);
-//        // Will return true because it is the same object
+//        // Will return true because it is the same object (memory allocation)
 
 //        Person person1 = new Person("John");
 //        Person person2 = person1;
@@ -62,13 +79,15 @@ public class Person {
 //        System.out.println(person2.getName());
 //        // "Jane"
 
+//    // *** Remember that memory allocation acts differently with primitive types.
+//    //     The above example would not create an alia but change the value.
 //    }
 
 
 //}
 
 
-// TODO ------------- OPP PRE-LECTURE QUESTIONS ----------------------------
+// TODO ----------------------------------------- OPP PRE-LECTURE QUESTIONS:
 
 //  What is the difference between static and instance methods/variables?
 
