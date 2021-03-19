@@ -1,22 +1,16 @@
-package Animals;
+package animals;
 
-public class Wolf extends Canine{
+public class Tiger extends Feline {
 
     private final boolean isEndangered;
     private final String nativeArea;
 
-    public Wolf(String sound, String size, String subSpecies, String commonName, boolean isEndangered, String nativeArea) {
-        super(size, commonName, subSpecies, sound);
+    public Tiger(int averageWeight, String commonName, String diet, String sound, boolean isEndangered, String nativeArea) {
+        super(averageWeight, commonName, diet, sound);
         this.isEndangered = isEndangered;
         this.nativeArea = nativeArea;
     }
 
-    public void printEmote() {
-        System.out.println("* Stares at the moon \n");
-    }
-    public void printDelimiter(){
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-    }
     public void printEndangeredStatus(){
         System.out.printf("Endangered: %s\n", getEndangeredStatus());
     }
@@ -24,24 +18,21 @@ public class Wolf extends Canine{
         System.out.printf("Native Area: %s\n", this.nativeArea);
     }
     public void printDetails(){
-        printEmote();
-        makeSound();
+
         printDelimiter();
-        printSubSpecies();
         printCommonName();
+        printDiet();
+        printAverageWeight();
         printNativeArea();
-        printSize();
         printEndangeredStatus();
+        printSound();
         printDelimiter();
     }
     private String getEndangeredStatus(){
         if (isEndangered){
-            return "No";
-        }else{
             return "Yes";
+        }else{
+            return "No";
         }
     }
 }
-
-
-

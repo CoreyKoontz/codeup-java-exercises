@@ -1,6 +1,4 @@
-package Animals;
-
-import java.util.Scanner;
+package animals;
 
 public class AnimalApp {
 
