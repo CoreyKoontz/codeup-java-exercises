@@ -4,42 +4,57 @@ import java.util.Scanner;
 
 public class InputTest {
 
+    // ------------------------------------------------------ Fields/Properties:
+
     private Scanner sc;
 
-    // Constructor:
+
+    // ------------------------------------------------------ Constructor:
+
+    // Creates a new instance of the Scanner class every time it is called
     public InputTest(){
         this.sc = new Scanner(System.in);
     }
 
-    public static void main(String[] args) {
-        Input input = new Input();
 
-        // getString method:
-        String userInput = input.getString();
-        System.out.println(userInput);
+    // ------------------------------------------------------ Main Method:
+
+    public static void main(String[] args) {
+        Input input = new Input();// <-Creates an Instance of an
+                                  //   Input object when 'input' is called.
+
+//        // getString method:
+//        // Will return string value no matter what is entered.
+//        System.out.println("getString() TEST\nEnter a string:");
+//        String getStringInput = input.getString();
+//        System.out.println("PASS\nString entered: " + getStringInput);
 //
-//        // yesOrNo Method:
-//        System.out.println("Enter Y for true and N for false");
-//        boolean userInput = input.yesOrNo();
-//        if (userInput) {
-//            System.out.println("Your input returned true");
+//
+//        // yesNo Method:
+//        System.out.println("yesNo() TEST\nEnter Y for true and N for false: ");
+//        boolean yesNoInput = input.yesNo();
+//        if (yesNoInput) {
+//            System.out.println("PASS\nYour input returned true");
 //        } else {
-//            System.out.println("Your input returned false");
+//            System.out.println("PASS\nYour input returned false");
 //        }
 //
+//
 //        //  getInt Method:
-//        System.out.println("Enter an Integer:");
-//        int userInput = input.getInt();
-//        System.out.println("Your integer is: " + userInput);
-//
-//        //  gitInt(min, max)
-//        System.out.println("Enter a number between 1 and 10:");
-//        int userInput = input.getInt(1, 10);
-//
-//        // getDouble method
-//        System.out.println("Enter a double");
-//        double userInput = input.getDouble();
-//        System.out.println("your Double is: " + userInput);
+//        System.out.println("getInt Test\nEnter an Integer:");
+//        int getIntInput = input.getInt();
+//        System.out.println("PASS\nYour integer is: " + getIntInput);
+
+
+        // gitInt(min, max) Method:
+        System.out.println("getInt(min, max) TEST\nEnter a number between 1 and 10:");
+        int gitIntInput = input.getInt(1, 10);
+
+
+        // getDouble method
+        System.out.println("Enter a double");
+        double userInput = input.getDouble();
+        System.out.println("your Double is: " + userInput);
 //
 //        //gitDouble(min, max)
 //        System.out.println("Enter a double between 1.5 and 10.5:");

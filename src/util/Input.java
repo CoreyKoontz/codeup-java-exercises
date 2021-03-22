@@ -70,7 +70,6 @@ public class Input {
 
     }
 
-
     // Verifies that the user enters a double within a specified range.
     public double getDouble(double min, double max) { // <-(Method Overloading)
         double userDouble = getDouble();// <-Calling a different version of itself
