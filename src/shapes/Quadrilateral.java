@@ -18,7 +18,5 @@ public abstract class Quadrilateral implements Shape{
 
     public abstract void setWidth(double width);
 
-//    public
-
 
 }
