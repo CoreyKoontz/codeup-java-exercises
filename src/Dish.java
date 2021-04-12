@@ -6,7 +6,6 @@ public class Dish {
 
     private boolean wouldRecommend;
 
-
     // Constructor:
 
     public Dish (String name, int cost, boolean recommend){
